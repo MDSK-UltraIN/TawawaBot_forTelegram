@@ -23,7 +23,7 @@ class StdOutListener(StreamListener):
               type(decoded['text'])
               )
         
-        chat_id = "" #telegram chat id
+        chat_id = '' #telegram chat id
         apiurl = '' #telegram bot api
         
 
@@ -37,9 +37,9 @@ class StdOutListener(StreamListener):
             #偵測是否含有指定字
             if("月曜日のたわわ" in decoded['text'] and "その" in decoded['text'] and "RT" not in decoded['text']):
                 print("Exist!!!")
-                r = requests.get(urlm+' this week\'s tawawa')
+                r = requests.get(urlm+' this week\'s tawawa') #send url & bot's msg 
                 print(r.status_code)
-                r = requests.get(urlphoto)
+                r = requests.get(urlphoto) #send image
                 print(r.status_code)
 
         except:
